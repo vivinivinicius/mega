@@ -1,1 +1,13 @@
-<p>mega works!</p>
+<div>
+  <h2>Verificador da Mega-Sena</h2>
+  <button (click)="gerarNumerosSorteados()">Gerar Números Sorteados</button>
+  <br />
+  <label for="numerosUsuario">Informe seus números (6-10 números):</label>
+  <input type="text" id="numerosUsuario" [(ngModel)]="numerosUsuario" placeholder="ex.: 1, 2, 3, 4, 5, 6" />
+  <br />
+  <button (click)="verificarNumeros()">Verificar Números</button>
+  <br />
+  <div *ngIf="resultado !== null">
+    <p>Você acertou {{ resultado }} números!</p>
+  </div>
+</div>
